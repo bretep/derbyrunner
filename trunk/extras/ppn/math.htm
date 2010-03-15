@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<!--math.htm-->
+<TITLE>Mathematics of Perfect-N</TITLE>
+<meta name="description" content="Mathematics of Perfect-N Pinewood Derby race method.">
+<meta name="keywords" content="mathematics, pinewood, derby, race, block design, difference sets, cub, scout, BSA, scouting, stan, pope, standcmr">
+</HEAD>
+<BODY BACKGROUND="marble.gif" TEXT="#000000" LINK="#0000C0" ALINK="#F00000" VLINK="#800080">
+
+<H1 ALIGN="CENTER">Mathematics of Perfect-N</H1>
+<H2 ALIGN="CENTER">The Perfect-N Criteria<BR>for Pinewood Derby Car Racing</H2>
+<OL>
+<LI>Each car races in each lane the same number of times.
+<LI>Each car races each opponent the same number of times.
+</OL> 
+<H2 ALIGN="CENTER">The Inspiration</H2>
+<P ALIGN="CENTER"><IMG SRC="grsyn.gif" ALT="[inspiration]" ></P>
+<P>Consider the ring labeled "Perfect-7-3." Let us number the small circles clockwise starting from the top center.  Then observe the two connected line segments, labeled 1 and 2. Those numbers represent the amount added to locate the next spot. These line segments are a generator for the Perfect-7 chart. This generator is depicted as "{1,2}"</P>
+<P>Observe that in its present position, it "marks" spots 1, 2 and 4.  Now, pick up the generator and position the other end of the first segment over spot #1. The generator now marks spots 7, 1 and 3. Finally position the far end of the second segment over spot #1. The generator now marks spots 5, 6 and 1.</P>
+<P>These segments form a valid "generator" for Perfect 7-3 because each of the spots 2 through 7 have been marked by the generator the same number of times.</P>
+<P>Lacking (yet) a method to "write out solutions from a recipe", this structure of generators provides a fast way to evaluate a potential solution. Also, since it represents a 3 X 7 array of numbers using just two numbers, it allows the potential solutions to be iterated much more quickly (7*6 possible combinations) than by iterating the whole array (7!^3 possible combinations). 
+<HR><BR>
+<H2 ALIGN="CENTER">How a Generator Works</H2>
+<P>The generator in the position noted in the above graphic marks the cars, in order, for the first heat.  To display the next heat, move the generator one step clockwise. Continue until the CCW end of the generator rests on the last spot (car) in the ring.</P>
+<P>If more than one generator is shown, apply the generators one at a time: Step the first generator around the ring, then step the second, etc.</P>
+<P>The result of this procedure is that the cars in lane 1 will be in ascending sequence.
+<HR><BR>
+<H2 ALIGN="CENTER">Other Simplifying Observations - Sieves</H2>
+<H3>Magnitude of Generator Elements</H3>
+<P>If there is a solution, then there is a solution in which the sum of the elements in each generator is less than the number of cars which the resulting Perfect-N chart will serve.  Another way of saying this is that for the base element of a portion of the chart, the car index numbers are ascending!</P>
+<P>This results from the fact that those portions of the chart resulting from a single generator may be exchanged and the result will still be a Perfect-N chart.  So, exchange lanes so that the cars are in ascending order across the lanes of the first heat produced by that generator.  The sum of the differences between adjacent lanes is less than the number of cars!</P>
+<H3>Occurrences of Specific Generator Elements</H3>
+<P>Note how many times each car may race each other car. The number of occurrences of any specific value in the generator(s) may not exceed this value. Moreover, number of occurrences of any specific sum of one or more adjacent generator elements may not exceed this value!</P> 
+<P>This, for instance, eliminates the generator {1,1} from possibly generating the Perfect-7-3 Chart!, However, it allows {1,1} as a generator for Perfect-3-3 or Perfect-4-3.</P>
+<P>Consider the chart for Perfect 91-10 (91 cars on 10 lanes, matched one time each): The generators beginning {1,1,} and {1,2,3,} are eliminated without further consideration because they produce too many pairings of the same cars. 
+<HR><BR>
+<H2 ALIGN="CENTER">Other Observations</H2>
+<H3>Some Attributes of Which I Am Confident</H3>
+<P>1. Many such charts can be generated using a set of one or more "generators".  (A "generator" is a "difference vector" representing the difference between the car index numbers in adjacent lanes of a heat. A pairing chart is produced by applying each of the generator as follows: assign lane 1 of the first heat as car index 1 and increment by 1 thru succeeding heats until each car is represented; for each heat determine the car index numbers in the other lanes by successively incrementing by the respective generator element: c_i+1 = c_i + g_i, i.e. the car index number in lane i+1 of a heat is the sum of the car index number in lane i and the i-th element of the generator.)</P>
+<P>2. Potential solutions relate as follows: <BR>
+Let L be the number of lanes, and <BR>
+let G be the number of generators.<BR>
+Then R, the number of times each car should race against one other car, relates to C, the number of cars served, as follows:<BR>
+Provided that R divides G * L * (L-1), then C = 1 + (G*L*(L-1)) / R, and the number of heats required for the chart will be G*C.</P>
+<P>3. Inspection of a potential generator set provides a straight forward answer as to whether the resulting chart satisfies the criteria. The criteria are satisfied if each car is paired R times with car 1.  (R as defined above).</P>
+<P>4. If a pairing chart satisfies the criteria, then a pairing chart
+produced by interchanging lanes, heats, or car index numbers also
+satisfies the criteria.</P>
+<H3>Attributes Which I Believe to Be True</H3>
+<P>1. There is no solution for the following cases:<BR>
+a. 4-lanes 25-cars 2-generators; and <BR>
+b. 7-lanes 43-cars 1-generator.<BR>
+<BR>
+<H3>Attributes Which I Suspect</H3>
+<P>1. If a pairing chart satisfies the criteria (at the top of the post), it
+can be transformed by exchanging lanes, heats and/or car index numbers
+into a chart that can be produced by generators as described above. (Perhaps, prove
+by counting all possible solutions and counting all solutions producable
+from generators and exchanges... but how many generators are there?)</P>
+<HR><BR>
+<H2 ALIGN="CENTER">References</H2>
+<P>These observations seem consistent with results described by Marshall Hall, Jr. in his book <A HREF="math1.htm">"Combinatorial Theory"</A> (Blaisdell Publishing Company, Waltham, MA, 1967) in the sections titled "Block Designs" and "Difference Sets".  (Thanks to Douglas J. Zare with a "Cal Tech" E-Mail address for guiding me to this book!)  I'm still trying to match up everything.  So far I haven't "matched up" the concept of "lanes" because the block designs do not appear to necessarily consist of "ordered n-tuples."  None-the-less, most of the charts contained in my web pages are anticipated in the appendix of Hall's book and are attributed there to Fisher and Yates "Statistical Tables for Biological, Agricultural, and Medical Research".  
+<HR><BR>
+<H2 ALIGN="CENTER">Recipes?</H2>
+<P>If your mathematics background permits, any guidance, direction, or insights that you can provide will be much appreciated. Indeed, relevant E-Mails will be treasured! Just click the "Mailbox Icon" below and expound! (I suggest a "subject line" of "Perfect-N Theory" to help me pick out these important tidbits from my in-basket.)</P>
+<HR>
+<P>
+Back to <A HREF="grdir.html">"Perfect N" Race Grid Directory</A>
+<BR>
+Return to <A HREF="index.html">The Pope's Place</A>
+<BR>
+<A HREF="mailto:StanDCmr@aol.com"><IMG SRC="mailbox.jpg" ALIGN="BOTTOM" WIDTH="32" HEIGHT="32" ALT="E-Mail"> <I>Feedback!</I></A> 
+<BR>
+Last changed 5/26/97
+<IMG SRC="/cgi-bin/counter?standcmr/math&font=invisible" alt="counter">
+<BR>
+Copyright 1997 &copy; by Stan Pope.  All rights reserved.
+</BODY>
+</HTML>

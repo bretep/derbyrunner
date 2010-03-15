@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>DerbyRunner</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="derby.css" type="text/css">
+    <script type="text/python" src="derby.py">
+</script>
+</head>
+<body onload="homePage.render()">
+    <div>
+        <table id="header" summary="page header">
+            <tr>
+                <td id="hdr-left">
+                    <input type="image" src="shield.png" Class="micro-button" onclick="homePage.render()">
+                    <input type="image" src="vehicles.png" Class="micro-button" onclick="manageVehicles.render()">
+                    <input type="image" src="races.png" Class="micro-button" onclick="manageRaces.render()">
+                </td>
+                <td id="hdr-center">&nbsp;</td>
+                <td id="hdr-right">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    <div id="content"></div>
+    <div id="footer"></div>
+</body>
+</html>
