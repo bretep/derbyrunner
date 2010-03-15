@@ -1,21 +1,46 @@
-The MIT License
+################################################################################
+DerbyRunner is licensed under the MIT License:
 
 Copyright (c) 2010 Steven P. King
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+################################################################################
+
+All icons and artwork are derived from "Free vector road signs & traffic light" at Digital-Artist-Toolbox.com <http://digital-artist-toolbox.com/?p=11> and are Copyright (c) 2008 Digital-Artist-Toolbox.com.
+
+License and usage
+
+License and Usage Info for digital-artist-toolbox Freebies
+
+digital-artist-toolbox source files (freebie downloads) are original works, and subject to copyright.
+
+Every file I create and/or give away is copyrighted by me. I own the rights to all of my artwork. Get permission from me if you are unsure about anything.
+
+Terms and Conditions for all digital-artist-toolox.com Downloads:
+
+Things you can NOT do:
+
+ You may NOT Redistribute digital-artist-toolbox Original Source files from your own site.
+
+ You may NOT adapt digital-artist-toolbox’s free source files in order to charge money for them in any way.
+
+ You may NOT claim any digital-artist-toolbox file as your own.
+
+ You may NOT take any digital-artist-toolbox file and sell it on a stock photography/vector resource site.
+
+ You may NOT copy and paste a digital-artist-toolbox entire article on your own site. You may only feature an excerpt on your site and link to mine for the original story. Copying articles in full is copyright infringement. Use Excerpts only please.
+
+By using my files, content, or both you agree to these terms and conditions which are subject to change without notice. Violating these terms and conditions could and will result in punishment to the maximum extent under law.
+
+Things you CAN do:
+
+Use digital-artist-toolbox files in your graphic design work, be it comercial or just for practice.
+
+Take a screenshot or grab an image from one of my posts and link to the post if you want to allow your visitors access to digital-artist-toolbox Files.
+
+################################################################################
