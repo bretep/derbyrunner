@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<!--math1.htm-->
+<TITLE>Combinatorial Theory</TITLE>
+<meta name="description" content="Combinatorial Theory: Mathematics of Perfect-N Pinewood Derby race method.">
+<meta name="keywords" content="mathematics, pinewood, derby, race, block design, difference sets, cub, scout, BSA, scouting, stan, pope, standcmr">
+</HEAD>
+<BODY BACKGROUND="marble.gif" TEXT="#000000" LINK="#0000C0" ALINK="#F00000" VLINK="#800080">
+
+<H1 ALIGN="CENTER">Combinatorial Theory</H1>
+<H2 ALIGN="CENTER">A summary of relevant concepts</H2>
+<P>Definitions and theorems are from the book "Combinatorial Theory" by 
+Marshall Hall, Jr.,  Blaisdell Publishing Company, Waltham, MA, 1967.  Relationships to Perfect-N and to Stearns Method, as well as all errors, are my own.</P>
+<BR>
+<P>Definition.  A balanced incomplete block design D(<I>b,v,k,r,l</I>) is an arrangement of <I>v</I> distinct objects into <I>b</I> blocks such that each block contains exactly <I>k</I> distinct objects, each object occurs in exactly <I>r</I> different blocks, and every pair of distinct objects occurs in exactly <I>l</I> blocks.</P>
+<BR>
+<P>Block Designs D(<I>b,v,k,r,l</I>), where 
+<UL>
+<LI><I>b</I>: blocks = heats
+<LI><I>v</I>: objects = cars
+<LI><I>k</I>: objects per block = lanes on track
+<LI><I>r</I>: occurrences = heats per car
+<LI><I>l</I>: pairing = number of times two cars race each other.
+</UL>
+<BR>
+<P>Elementary relations:
+<UL>
+<LI><I>bk = vr</I>
+<LI><I>r(k-1) = l(v-1)</I>
+</UL>
+<BR>
+<P>Perfect-N is concerned with the case where <I>r</I> = <I>nk</I> and <I>b</I> = <I>nv</I>, n is a positive integer.</P> 
+<BR>
+<P>When <I>n</I> = 1, the Perfect-N charts have <I>b = v</I> and, so, are called <I>symmetric</I>. Any two blocks in a symmetric block design always have exactly <I>l</I> objects (cars) in common.  However, not all symmetric designs are Perfect-N, because Perfect-N requires <I>r</I> = <I>nk</I>, and, further, that the blocks may be written as ordered n-tuples in which each object (car) appears the same number of times in each position of the collection of blocks which make up the design. </P>
+<BR>
+<P><I>Derived design</I> and <I>residual design</I> block designs are based on symmetric designs but do not appear to be Perfect-N because they fail to satisfy the requirement that <I>r</I> = <I>nk</I>.  (Hall's descriptions of these escape me for now.)</P>
+<BR>
+<P>Another category of balanced incomplete block designs is called <I>group-divisible</I>. Each group of blocks contain each of the objects once, so there are <I>v/k</I> blocks in each group. The racing plan called Stearns Method consists of some number of such groups, but not necessarily <I>r</I> groups, i.e. enough to satisfy the <I>bk = vr</I> requirement. In fact, it appears that Stearns Method uses just enough groups to satisfy the racing duration parameter. Other priorities for Stearns Method are to try to have each car race as many other cars as possible and to race in as many lanes as possible.  Balanced competition and balanced lane usage, however, are not priorities. (Oops... some Stearns Method charts appear to violate the specifications for "balanced incomplete block designs", so perhaps there is "something else going on in there"...)</P>
+<BR>
+
+<H3 ALIGN="CENTER">Cyclic Characteristics</H3>
+<P>Definition: A set of <I>k</I> residues D: {a_1,...,a_k} modulo <I>v</I> is called a (<I>v,k,l</I>) difference set if for every <I>d</I> not equivalent to 0 (mod <I>v</I>) there are exactly <I>l</I> ordered pairs (a_i,a_j), a_i, a_j elements of D such that a_i - a_j equivalent to d (mod <I>v</I>).</P>
+<BR>
+<P>Theorem: A set of <I>k</I> residues D: {a_1,...a_k} modulo <I>v</I> is a (<I>v,k,l</I>) difference set if and only if the sets B_i: {a_1+i,a_2+i,...,a_k+i} modulo <I>v</I>, i = 0,...,<I>v</I>-1 are a cyclic (<I>v,k,l</I>) block design B.</P>
+<BR>
+<P>Every symmetric Perfect-N chart which I had previously created can be replaced by an equivalent cyclic (<I>v,k,l</I>) block design.</P>
+<BR>
+<P>When <I>b = nv,</I> where integer <I>n</I> greater than 1, balanced incomplete block designs can sometimes be created from more than one difference set. Design (26,13,3,6,1) may be generated from difference sets [1,3,9] and [2,5,6] mod 13 or from [1,2,5] and [1,3,8] mod 13.  </P>
+<BR>
+<HR>
+<P>
+Back to <A HREF="math.htm">Mathematics of Perfect N</A>
+<BR>
+Back to <A HREF="grdir.html">"Perfect N" Race Grid Directory</A>
+<BR>
+Return to <A HREF="index.html">The Pope's Place</A>
+<BR>
+<A HREF="mailto:StanDCmr@aol.com"><IMG SRC="mailbox.jpg" ALIGN="BOTTOM" WIDTH="32" HEIGHT="32" ALT="E-Mail"> <I>Feedback!</I></A> 
+<BR>
+Last changed 6/3/97
+<IMG SRC="/cgi-bin/counter?name=standcmr/ctr2/math1&font=invisible" alt="counter">
+<BR>
+Copyright 1997 &copy; by Stan Pope.  All rights reserved.
+</BODY>
+</HTML>

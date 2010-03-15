@@ -1,0 +1,27 @@
+#appname:DerbyRunner
+#appid:com.narbat.derbyrunner
+#publisher:sking
+#image:shield.png
+#url:http://sites.google.com/site/derbyrunner/
+#guid:72aeda50-39a6-415b-bcf6-1bc8c8553f1b
+#desc:Manage a Pinewood Derby style race.
+#type:desktop
+runtime:0.8.5
+api:0.8.5
+javascript:0.8.5
+tianalytics:0.8.5
+tiapp:0.8.5
+tifilesystem:0.8.5
+tiplatform:0.8.5
+tiui:0.8.5
+python:0.8.5
+ticodec:0.8.5
+tidatabase:0.8.5
+tidesktop:0.8.5
+tigrowl:0.8.5
+timedia:0.8.5
+timonkey:0.8.5
+tinetwork:0.8.5
+tinotification:0.8.5
+tiprocess:0.8.5
+tiworker:0.8.5

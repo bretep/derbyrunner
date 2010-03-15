@@ -1,0 +1,701 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Complementary Perfect-N Racing Charts</TITLE>
+<meta name="description" content="Complementary Perfect-N Racing Charts.">
+<meta name="keywords" content="mathematics, pinewood, derby, race, cub, scout, cory, young">
+</HEAD>
+
+<BODY BACKGROUND="marble.gif" TEXT="#000000" LINK="#0000C0" ALINK="#F00000" VLINK="#800080">
+
+<H1 ALIGN="CENTER">Complementary Perfect-N Racing Charts</H1>
+<H2 ALIGN="CENTER">By <A HREF="mailto:cory_young@yahoo.com">Cory Young</A>,<BR>in collaboration with<BR><A HREF="mailto:StanDCmr@aol.com">Stan Pope</A>,<BR>September 24, 1997<BR>Revised November 9, 1997</H2>
+
+<TABLE ALIGN="CENTER" BORDER=3>
+<TR>
+<TH COLSPAN=3 ALIGN=CENTER><B>The Complementary Perfect-N Concept</B></TH>
+</TR>
+<TR>
+<TD ALIGN=CENTER><IMG SRC="cpsyn1.gif" ALT="[P13-3(1)]"></TD>
+<TD ALIGN=CENTER><IMG SRC="cpsyn2.gif" ALT="[P'13-3(1)]"></TD>
+<TD ALIGN=CENTER><IMG SRC="cpsyn3.gif" ALT="[CP13-3(2)]"></TD>
+</TR>
+<TR VALIGN=TOP>
+<TD><B>Start with an ordinary everyday Perfect-N chart, such as this P&nbsp;13-3&nbsp;(1).</B></TD>
+<TD><B>Form another Perfect-N chart by using the mirror image (complement) of the first.</B></TD>
+<TD><B>Combine them to form a new chart, this time a "Complementary Perfect-N" chart, such as this C-P&nbsp;13-3&nbsp;(2).</B></TD>
+</TR>
+</TABLE>
+
+<hr>
+ 
+<H3>Summary:</H3>  
+
+<blockquote>
+<font size="+1">
+Complementary Perfect N Racing charts are a high precision method
+for awarding top place trophies and for selecting representatives to
+district or council races.
+</font>
+</blockquote>
+
+<hr>
+
+<H3>Definition:</H3> 
+
+<blockquote>
+<font size="+1">
+An N-X racing chart is a 2-dimensional array with X columns where 
+<br><br>
+1. Every element of the array is in the set {1,&nbsp;2,&nbsp;3,&nbsp;...&nbsp;N}, and
+<br><br> 
+2. No element appears more than once in the same row of the array. 
+</font>
+</blockquote>
+
+<p>
+Familiarly, an N-X racing chart is a set of lane assignments for 
+N cars on a track with X lanes. 
+
+<p>
+Here is a simple 3-2 racing chart: 
+
+<pre>
+        Ln  1   Ln  2
+        =====   =====
+Heat 1    1       2
+Heat 2    2       3
+</pre>
+
+<p>
+Note that there are 2 (i.e. X) columns, that each element of the 
+array is from 1 to 3 (i.e. 1 to N), and that no element appears more
+than once in each row. 
+
+<p>
+This is a racing chart, but it is probably not a very good one, 
+since it would be difficult to draw any useful conclusions from it.
+
+<hr>
+
+<H3>Definition:</H3>
+
+<blockquote>
+<font size="+1">
+For an N-X racing chart, let n<sub>x</sub> be the number of times 
+element n appears in column x, and let n<sub>m</sub> be the number 
+of times elements n and m appear in the same row.	
+
+<br><br>
+An N-X racing chart is said be Perfect N-X&nbsp;(Y) if: 
+<br>
+1. n<sub>m</sub> is equal to Y for all n, m from 1 to N, 
+n not equal to m, and
+<br>
+2. n<sub>x</sub> is the same value for all n from 1 to N, 
+x from 1 to X.  
+</font>
+</blockquote>
+
+<p>
+Familiarly, this says that:
+
+<ol>
+<li>Every car races every other car Y times  
+<li>Every car races the same number of times in each lane 
+</ol>
+
+<p>
+The chart above is not Perfect N, but by adding a single race it 
+becomes so.
+
+<pre>
+        Ln  1   Ln  2
+        =====   =====
+Heat 1    1       2
+Heat 2    2       3
+Heat 3    3       1
+</pre>
+
+<p>
+In this chart, N = 3, X = 2, Y = 1, so this chart is Perfect 3-2&nbsp;(1). Note that each car races 1 time in each lane.
+
+<p>
+Some conclusions about relative car speed might be drawn from racing with this chart, unless the lanes are so inequitable that "the fast lane always wins." The result with this chart, however, is that even with poor tracks, the track usually does not determine the overall winners, but ties are produced.   
+
+<hr>
+
+<H3>Definition:</H3> 
+
+<blockquote>
+<font size="+1">
+A generator G for an N-X racing chart is a vector of X-1 elements, 
+(g<sub>1</sub>,&nbsp;g<sub>2</sub>,&nbsp;...,g<sub>X-1</sub>) such that
+g<sub>i</sub> + g<sub>i+1</sub> + ... + g<sub>j</sub> is not equal to
+0&nbsp;modulo&nbsp;N for all i,&nbsp;j from 1 to X-1, i&nbsp;&lt;=&nbsp;j.  
+The element in the 
+generated chart section in row&nbsp;i, column&nbsp;1 is i.  The element in the
+generated chart section in row&nbsp;i, column&nbsp;j, for j&nbsp;&gt;&nbsp;1, is (i +
+g<sub>1</sub> + ... + g<sub>j-1</sub>) modulo&nbsp;N.
+</font>
+</blockquote>
+
+The above definition is used in subsequent text.  It is equivalent to the following recursive definition:
+
+<blockquote>
+<font size="+1">
+A generator G for an N-X racing chart is a vector of X-1 elements, 
+(g<sub>1</sub>,&nbsp;g<sub>2</sub>,&nbsp;...,g<sub>X-1</sub>) such that
+g<sub>i</sub> + g<sub>i+1</sub> + ... + g<sub>j</sub> is not equal to
+0&nbsp;modulo&nbsp;N for all i,&nbsp;j from 1 to X-1, i&nbsp;&lt;=&nbsp;j.  
+<br><br>
+If C<sub>i,j</sub> is the element in the
+generated chart section in row&nbsp;i, column&nbsp;j then 
+<br>
+1. C<sub>i,j</sub> = i, and 
+<br>
+2. C<sub>i,j+1</sub> = C<sub>i,j</sub> +  g<sub>j</sub> modulo&nbsp;N for j&nbsp;&lt;&nbsp;X
+</font>
+</blockquote>
+
+<p>
+For convenience in this definition, we will write Car 0 as "N", not "0". 
+They are equivalent, modulo N, but most people <!-- (a few computer nerds 
+excepted)--> number things beginning with "1", not "0". 
+
+<p>
+A generator is used as a difference vector to generate a racing
+chart, or a section of a racing chart.  Consider the generator (1,2)
+for 6 Cars on a 3 Lane track.  Start with Car 1 in Lane 1 and use
+generator values additively to determine the Cars in Lanes 2 and 3.
+
+<p>
+This gives the following partial chart:
+
+<pre>			
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+</pre>
+  
+<p>
+As an abreviated way to produce the rest of the heats, just add 1 
+to each Car number from the previous heat until every Car has raced in Lane 1.
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    2       3       5
+Heat 3    3       4       6
+Heat 4    4       5       1
+Heat 5    5       6       2 
+Heat 6    6       1       3 
+</pre>
+
+<p>
+The condition that no sequence of g<sub>i</sub>'s add up to 0
+modulo N ensures that no Car will occupy two lanes in the same race.
+
+<p>
+Note that the 6-3 racing chart generated by (1,2) is not Perfect-N.
+For example, Car 1 races Car 4 twice, but races each of the other Cars
+only once.  This violates Perfect-N definition.
+
+<p>
+But use the same generator to build a 7-3 racing chart:
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    2       3       5
+Heat 3    3       4       6
+Heat 4    4       5       7
+Heat 5    5       6       1 
+Heat 6    6       7       2 
+Heat 7    7       1       3
+</pre>
+
+<p>
+And you happen to get a Perfect 7-3 (1) chart.  
+
+<p>
+Multiple generators can be used to generate larger racing charts.
+For example, here is a Perfect&nbsp;13-3&nbsp;(1) chart generated by (1,3) and 
+(2,5).
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       5
+Heat 2    2       3       6
+Heat 3    3       4       7
+Heat 4    4       5       8
+Heat 5    5       6       9
+Heat 6    6       7      10
+Heat 7    7       8      11
+Heat 8    8       9      12
+Heat 9    9      10      13
+Heat 10  10      11       1
+Heat 11  11      12       2
+Heat 12  12      13       3
+Heat 13  13       1       4
+Heat 14   1       3       8
+Heat 15   2       4       9 	
+Heat 16   3 	  5      10
+Heat 17   4       6      11
+Heat 18   5       7      12
+Heat 19   6       8      13
+Heat 20   7       9       1
+Heat 21   8      10       2
+Heat 22   9      11       3
+Heat 23  10      12       4
+Heat 24  11      13       5
+Heat 25  12       1       6
+Heat 26  13       2       7
+</pre>
+
+<hr>
+
+<H3>Definition:</H3> 
+    
+<blockquote>
+<font size="+1">
+Let G be an N-X racing chart generated by 
+(g<sub>1</sub>,&nbsp;...&nbsp;,&nbsp;g<sub>X-1</sub>).  
+Then the inverse of G, denoted -G, is the N-X
+racing chart generated by (-g<sub>1</sub>,&nbsp;...&nbsp;,&nbsp;-g<sub>X-1</sub>),
+where -g<sub>i</sub> is computed modulo&nbsp;N.
+<br><br>
+More generally, let G be an N-X racing chart generated by 
+G<sub>i</sub> = (g<sub>i,1</sub>,&nbsp;...&nbsp;,&nbsp;g<sub>i,X-1</sub>), 
+for i=1 to H. Then the inverse of G is the N-X racing chart 
+generated by -G<sub>i</sub> = (-g<sub>i,1</sub>,&nbsp;...&nbsp;,&nbsp;-g<sub>i,X-1</sub>), for i=1 to H, where -g<sub>i,k</sub> 
+is computed modulo N.
+</font>
+</blockquote>
+
+<p>
+The inverse of the 6-3 racing chart generated earlier by (1,2) is
+the chart generated by (-1,&nbsp;-2) = (5,4), which is as follows:
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       6       4
+Heat 2    2       1       5
+Heat 3    3       2       6
+Heat 4    4       3       1
+Heat 5    5       4       2
+Heat 6    6       5       3
+</pre>
+
+<hr>
+
+<H3>Lemma 1:</H3>
+
+<blockquote>
+<font size="+1">
+Suppose an N-X racing chart G generated by (g<sub>1</sub>,&nbsp;...&nbsp;,&nbsp;g<sub>X-1</sub>) is Perfect N-X.  
+Then the chart -G generated by 
+(-g<sub>1</sub>,&nbsp;...&nbsp;,&nbsp;-g<sub>X-1</sub>) is also Perfect N-X.
+<br><br>
+More generally, suppose an N-X racing chart G is generated by
+G<sub>i</sub> = (g<sub>i,1</sub>,&nbsp;...&nbsp;,&nbsp;g<sub>i,X-1</sub>), for 
+i=1 to H, is Perfect N-X.  Then the chart -G generated by 
+-G<sub>i</sub> = (-g<sub>i,1</sub>,&nbsp;...&nbsp;,&nbsp;-g<sub>i,X-1</sub>), 
+for i=1 to H, is also Perfect N-X. 
+</font>
+</blockquote>
+
+<p>
+Proof:
+    
+<blockquote>
+Note that renumbering the elements of a Perfect N-X chart results in
+a Perfect N-X chart.  Note also that reordering the rows of a Perfect
+N-X chart results in Perfect N-X chart.
+<br><br>
+Use the one-to-one correspondence f(n) = (N + 2 - n) modulo&nbsp;N to 
+reorder the rows of each chart section G<sub>i</sub>.  Call the new
+chart sections G<sub>i</sub><sup>'</sup>.  The element x in row j, 
+column k of G<sub>i</sub><sup>'</sup> is given by:
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+x = ( (N  + 2 - j) + g<sub>i,1</sub> + ... + g<sub>i,k-1</sub> ) modulo&nbsp;N
+<br><br>
+For chart section -G<sub>i</sub> (not reordered), the element y in
+row j, column k is:
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+y = ( j + (-g<sub>i,1</sub>) + ... + (-g<sub>i,k-1</sub>) ) modulo&nbsp;N
+<br><br>
+Adding the two equations gives...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+x + y = (N + 2) modulo N
+<br><br>
+which implies that...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+y = (N + 2 - x) modulo N
+<br><br>
+In other words, -G<sub>i</sub> is simply a renumbering of
+G<sub>i</sub><sup>'</sup>, and G<sub>i</sub><sup>'</sup> is simply 
+a reordering of G<sub>i</sub>.  Since this is true for all
+G<sub>i</sub>, i=1 to H, the chart generated by -G<sub>i</sub>, i=1
+to H, must also be Perfect N-X.
+</blockquote>
+
+<p>
+As an example, consider the Perfect 3-3 chart generated by (1,1).
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    2       3       1
+Heat 3    3       1       2
+</pre>
+
+<p>
+Now, reorder the rows using the function f(x) = N + 2 - x.
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    3       1       2
+Heat 3    2       3       1
+</pre>
+
+<p>
+Finally, renumber the elements using the same function.
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       3       2
+Heat 2    2       1       3
+Heat 3    3       2       1
+</pre>
+
+The result is the chart generated by (-1,-1) = (2,2).  Clearly, 
+this inverse chart is also Perfect 3-3.
+
+<hr>
+
+<H3>Lemma 2:</H3> 
+    
+<blockquote>
+<font size="+1">
+    A union of Perfect N-X racing charts is Perfect N-X.
+</font>
+</blockquote>
+
+<p>Proof:
+
+<blockquote>
+Let C<sub>1</sub> and C<sub>2</sub> be Perfect N-X racing charts. 
+Suppose that C<sub>1</sub> has R<sub>1</sub> races per lane for each
+car, and that C<sub>2</sub> has R<sub>2</sub> races per lane for each
+car.  Then C<sub>1</sub> union C<sub>2</sub> has R<sub>1</sub> +
+R<sub>2</sub> races per lane for each car, which satisfies the first 
+half of Perfect N-X.	
+<br><br>
+Suppose C<sub>1</sub> has Y<sub>1</sub> head to head races for each
+pair of cars, and C<sub>2</sub> has Y<sub>2</sub> head to head races
+for each pair of cars.  Then C<sub>1</sub> union C<sub>2</sub> has
+Y<sub>1</sub> + Y<sub>2</sub> head to head races for each pair of
+cars, which satisfies the second half of Perfect N-X. 
+</blockquote>
+
+<p>
+As an example, consider the Perfect 4-3 chart generated by (1,1), 
+and the Perfect 4-3 chart generated by (1,2).
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    2       3       4
+Heat 3    3       4       1
+Heat 4    4       1       2
+
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    2       3       1
+Heat 3    3       4       2
+Heat 4    4       1       3
+</pre>
+
+The union is this chart:
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    2       3       4
+Heat 3    3       4       1
+Heat 4    4       1       2
+Heat 5    1       2       4
+Heat 6    2       3       1
+Heat 7    3       4       2
+Heat 8    4       1       3
+</pre>
+
+This chart is also Perfect 4-3.
+
+<hr>
+
+<H3>Definition:</H3> 
+
+<blockquote>
+<font size="+1">
+    An N-X racing chart is said be Complementary if the number 
+    of times elements n and m appear in the same row in columns 
+    x and y, respectively, equals the number of times elements 
+    n and m appear in the same row in columns y and x, respectively,
+    for all n, m from 1 to N and x, y from 1 to X. 
+</font>
+</blockquote>
+
+<p>
+Familiarly, this says that if two cars are in the same race, there 
+must be a corresponding race in the racing chart where the two cars
+reverse lanes. 
+
+<hr>
+
+<H3>Lemma 3:</H3> 
+
+<blockquote>
+<font size="+1">
+Suppose an N-X racing chart is generated by G = 
+(g<SUB>1</SUB>,&nbsp;...&nbsp;,&nbsp;g<SUB>X-1</SUB>). Let -G = 
+(-g<SUB>1</SUB>,&nbsp;...&nbsp;,&nbsp;-g<SUB>X-1</SUB>)
+where -g<SUB>k</SUB> is computed modulo N.  Then the chart generated
+by G and -G is Complementary. 
+</font>
+</blockquote>
+
+<p>Proof:
+
+<blockquote>
+Suppose that in the chart generated by G, elements n and m appear
+in columns u and v, respectively, in the same row, u &lt; v.  Then...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;n + g<sub>u</sub> + ... + g<sub>v-1</sub> = m modulo N
+<br><br>
+This implies that...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;m - g<sub>u</sub> - ... - g<sub>v-1</sub> = n modulo N
+<br><br>
+or...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp; m + (-g<sub>u</sub>) + ... + (-g<sub>v-1</sub>) = n modulo N
+<br><br>
+That is, in the chart generated by -G, elements m and n appear
+in columns u and v, respectively, in the same row.
+</blockquote>
+
+Consider the 9-3 chart generated by (1,2).
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    2       3       5
+Heat 3    3       4       6
+Heat 4    4       5       7
+Heat 5    5       6       8
+Heat 6    6       7       9
+Heat 7    7       8       1
+Heat 8    8       9       2
+Heat 9    9       1       3
+</pre>
+
+<p>
+Its inverse is this chart:
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       9       2
+Heat 2    2       1       3
+Heat 3    3       2       4
+Heat 4    4       3       5
+Heat 5    5       4       6
+Heat 6    6       5       7
+Heat 7    7       6       8
+Heat 8    8       7       9
+Heat 9    9       8       1
+</pre>
+
+The union of the two charts meets the lane-reversal criteria, 
+that is, the union is Complementary.
+ 
+<hr>
+
+<H3>Lemma 4:</H3> 
+
+<!--SBP this is more complicated than it need be... does it not 
+follow immediately from Lemma 3?   ahah! Yes, but only for 
+"generated charts"!-->
+
+<blockquote>    
+<font size="+1">
+A union of Complementary N-X racing charts is Complementary.
+</font>
+</blockquote>
+
+<p>
+Proof:
+
+<blockquote>    
+Let C<sub>1</sub> and C<sub>2</sub> be Complementary N-X racing
+charts.  Suppose that in the chart C<sub>1</sub> union C<sub>2</sub>,
+elements n and m appear in columns u and v, respectively, in the same
+row, u &lt; v.  This row must belong either to C<sub>1</sub> or
+C<sub>2</sub>.  Without loss of generality, assume it belongs to
+C<sub>1</sub>.  Because C<sub>1</sub> is Complementary, a
+corresponding row must exist in C<sub>1</sub> such that elements n
+and m appear in columns v and u, respectively.  C<sub>1</sub> union
+C<sub>2</sub> also contains this row and therefore is Complementary.
+</blockquote>    
+
+<p>    	
+Here are two 4-3 charts, each of which is itself Complementary.
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    3       4       2
+Heat 3    2       1       3
+Heat 4    4       3       1
+</pre>
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    4       3       2
+Heat 3    2       1       4
+Heat 4    3       4       1
+</pre>
+
+Clearly, their union is also Complementary.
+
+<hr>
+
+<H3>Theorem:</H3> 
+
+<blockquote>
+<font size="+1">
+ 
+Suppose a Perfect N-X racing chart has generators G<SUB>i</SUB> =
+(g<SUB>i,1</SUB>,&nbsp;...&nbsp;g<SUB>i,X-1</SUB>), for i=1 to H. Let
+-G<SUB>i</SUB> = (-g<SUB>i,1</SUB>,&nbsp;...&nbsp;-g<SUB>i,X-1</SUB>) where
+-g<SUB>i,j</SUB> is computed modulo N. Then the chart whose
+generators are G<SUB>i</SUB> union -G<SUB>i</SUB>, i=1 to H, 
+is Perfect N-X and Complementary. 
+</font>
+</blockquote>
+
+<p>Proof: 
+
+<blockquote>
+
+By Lemma 1, the chart generated by the union of -G<sub>i</sub>, 
+i=1 to H, is Perfect N-X.  By Lemma 2, then, the union of
+G<sub>i</sub>, i=1 to H, and -G<sub>i</sub>, i=1 to H, is Perfect
+N-X.
+
+<br><br>
+For each i, the chart generated by G<sub>i</sub> and -G<sub>i</sub>
+is Complementary by Lemma 3.  The union of these for all i is therefore
+Complementary by Lemma 4.
+ 
+</blockquote>
+
+<P>
+Perfect N-X racing charts are very accurate at identifying the
+fastest cars.  However, if a pair of cars races an odd number times,
+or if they race an even number of times without satisfying the
+lane-reversal criteria, it can contribute to a loss of accuracy,
+because one of the cars may <!--will--> have an edge in lane assignments.
+
+<P>
+This theorem provides a method for transforming a Perfect N-X racing
+chart into a Complementary Perfect N-X racing chart, that is, one
+that satisfies the lane-reversal criteria.  The cost of the
+transformation is that the number of heats is doubled.
+
+<hr>
+
+<H3>Conjecture:</H3>
+
+<blockquote>
+<font size="+1">
+Suppose there exist N, X, and Y for which:
+<br>
+1. There exists a Perfect&nbsp;N-X&nbsp;(Y) racing chart,and
+<BR>
+2. Y is even.
+<br><br>
+Then there exists a racing chart which is Perfect N-X&nbsp;(Y) and
+Complementary.
+</font>
+</blockquote>
+
+<p>
+This conjecture stems from examples such as the following Perfect&nbsp;4-3&nbsp;(2) chart:
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       3
+Heat 2    2       3       4
+Heat 3    3       4       1
+Heat 4    4       1       2
+</pre>
+
+<p>
+This chart has is generated by (1,1).  It is Perfect&nbsp;N-X&nbsp;(Y) with Y
+even.  But it is not Complementary.
+
+<p>This chart, on the other hand, is Perfect&nbsp;4-3&nbsp;(2) and Complementary.
+
+<pre>
+        Ln  1   Ln  2   Ln  3
+        =====   =====   =====
+Heat 1    1       2       4
+Heat 2    3       4       2
+Heat 3    2       1       3
+Heat 4    4       3       1
+</pre>
+
+<p>
+However, it is not generate-able in the usual manner.  
+
+<HR>
+<P>
+Back to <A HREF="math.html">"Mathematics of Perfect-N</A>
+<BR>
+Return to <A HREF="index.html">The Pope's Place</A>
+<BR>
+<A HREF="mailto:StanDCmr@aol.com"><IMG SRC="mailbox.jpg" ALIGN="BOTTOM" WIDTH="32" HEIGHT="32" ALT="E-Mail"> <I>Feedback!</I></A> 
+<BR>
+Last changed 11/12/97 
+<BR>
+Technical Changes for HTML 3.2 Conformance 12/26/97
+<BR>
+Table Formatting: 12/13/98
+<BR>
+Copyright 1997 &copy; by Stan Pope, Cory Young.  All rights reserved.
+</P>
+</BODY>
+</HTML>
