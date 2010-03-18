@@ -12,7 +12,9 @@ import time
 import csv
 import uuid
 
-CFGFILE = os.path.join(os.environ['HOME'], 'derby.cfg')
+RESDIR = str(Titanium.Filesystem.getResourcesDirectory())
+APPDIR = str(Titanium.Filesystem.getApplicationDataDirectory())
+CFGFILE = os.path.join(APPDIR, 'derby.cfg')
 
 tri_asc = '&#x25B4;'
 tri_dsc = '&#x25BE;'
@@ -375,6 +377,35 @@ class Page(object):
 
 ################################################################################
 ##
+##  HelpPage
+##
+################################################################################
+class HelpPage(Page):
+    title = 'DerbyRunner Help'
+
+    def content(self):
+        try:
+            fh = open(os.path.join(RESDIR, 'help.html'))
+            help = fh.read()
+            fh.close()
+        except IOError, e:
+            help = str( P() <= 'Sorry, no help available' )
+
+        back = DIV()
+        back <= HR()
+        link = P()
+        link \
+                <= A(href="javascript:homePage.render()") \
+                <= IMG(Class="mini-button", src="shield.png")
+        link \
+                <= A(href="javascript:homePage.render()") \
+                <= "Back to Home Page"
+        back <= link
+
+        return help + str(back)
+
+################################################################################
+##
 ##  HomePage
 ##
 ################################################################################
@@ -397,12 +428,17 @@ class HomePage(Page):
             <= A(href="javascript:manageRaces.render()") \
             <= IMG(Class='home-button', src='races.png') \
                 + P('Manage Races')
-        root <= ht <= tr
+        ht <= tr
 
-#        div = DIV(id="about")
-#        div <= P() <= IMG(Class="mini-button", src="shield.png")
-#        root <= div
+        tr = TR()
+        tr \
+            <= TD(colspan="2") \
+            <= A(href="javascript:helpPage.render()") \
+            <= IMG(Class='home-button', src='help.png') \
+                + P('Get Help')
+        ht <= tr
 
+        root <= ht
         return str(root)
 
 ################################################################################
@@ -537,7 +573,8 @@ class ManageRaces(Page):
         tbl <= tr
         root <= tbl
 
-        for r in self.cfg.races.values():
+        races = sorted(self.cfg.races.values(), key=operator.attrgetter('title'))
+        for r in races:
             log.notice(str(r.uuid))
             tr = TR()
             tr <= TD() <= r.title
@@ -816,7 +853,7 @@ class RunRace(Page):
 #            'path'             : Titanium.Filesystem.getUserDirectory()
 #        }
 #        Titanium.UI.openSaveAsDialog(runRace.write, options)
-        fname = os.path.join(os.environ['HOME'], '%s.txt'%(self.race.title,))
+        fname = os.path.join(APPDIR, '%s.txt'%(self.race.title,))
         self.write([fname])
         window.alert('Race results written to\n%s'%fname)
 
@@ -845,6 +882,7 @@ log = Logger()
 cfg = Config(CFGFILE)
 cfg.read()
 
+helpPage        = HelpPage(cfg)
 homePage        = HomePage(cfg)
 manageVehicles  = ManageVehicles(cfg)
 manageRaces     = ManageRaces(cfg)
