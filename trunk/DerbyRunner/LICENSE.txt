@@ -1,4 +1,5 @@
-################################################################################
+########################################
+
 DerbyRunner is licensed under the MIT License:
 
 Copyright (c) 2010 Steven P. King
@@ -9,7 +10,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-################################################################################
+########################################
 
 All icons and artwork are derived from "Free vector road signs & traffic light" at Digital-Artist-Toolbox.com <http://digital-artist-toolbox.com/?p=11> and are Copyright (c) 2008 Digital-Artist-Toolbox.com.
 
@@ -43,4 +44,4 @@ Use digital-artist-toolbox files in your graphic design work, be it comercial or
 
 Take a screenshot or grab an image from one of my posts and link to the post if you want to allow your visitors access to digital-artist-toolbox Files.
 
-################################################################################
+########################################

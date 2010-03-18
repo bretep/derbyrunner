@@ -1,0 +1,61 @@
+<h1>DerbyRunner</h1>
+<p class="note">
+This document is not yet complete.
+</p>
+
+<h2>Overview</h2>
+<p>DerbyRunner is designed to keep track of participants, lane assignments,
+and scores in race. It was originally developed for a Cub Scout Pinewood Derby,
+but it should be useful for any similar sort of race.  The key assumptions
+are:</p>
+
+<ul>
+    <li>The race involves some sort of vehicle.</li>
+    <li>Each vehicle travels in its own lane; lane changes are not allowed.</li>
+    <li>The race is scored based on the order in which the vehicles cross
+        the finish line, not based on a timer.</li>
+</ul>
+
+<p>DerbyRunner manages lane assignments so that each vehicle races once in
+each lane, to minimize the bias caused by a "fast" or "slow" lane. It uses
+Young and Pope's <a href="http://stanpope.net/ppngen.html">
+Partial Perfect-N</a> algorithm to achieve this.</p>
+
+<p>The program manages two sets of data: vehicles and races. Typically you'll
+have several different qualifying races with different groups of vehicles, then
+a final championship race with the winners from the qualifying races.
+
+<h2>Managing Vehicles</h2>
+
+<p>The "Manage Vehicles" screen lets you enter information about each
+vehicle. Each vehicle has an ID, its owner's name, and an optional group
+to which it belongs.
+
+<p>The <b>Vehicle ID</b> can be any sort of string, though it
+makes sense to keep it short like "001", "002", "Den1Car1", etc. Each vehicle
+should have a unique ID.
+
+<p>The <b>Owner's Name</b> is just that -- the name of the vehicle's owner
+(or driver, or builder... Whoever is responsible for that vehicle.)
+
+<p>The <b>Group</b> is an optional field and can be anything which might
+help categorizing sets of vehicles. You may want to group them by skill
+level (Novice, Advanced, Expert), by rank (Wolf, Bear, Webelos), by classroom,
+by grade, by age, or any other categorization that makes sense. You can use
+anything you want here. DerbyRunner doesn't use groupings directly, but it
+does let you sort the vehicles according to group. This can be helpful when
+assigning vehicles to races.
+
+<p>Vehicles can be added manually, or imported from a Comma-Separated Values
+(CSV) file.  
+
+<p>If you intend to run multiple races, each vehicle needs a single entry.
+Vehicles that compete in more than one race still just have a single entry
+on the Manage Vehicles screen</p>
+
+<p>All changes made on the Manage Vehicles screen is automatically saved to
+disk.</p>
+
+<h2>Managing Races</h2>
+
+<p><i>not yet written</i></p>
