@@ -6,8 +6,8 @@
 <version>1.0</version>
 <publisher>sking</publisher>
 <url>http://code.google.com/p/derbyrunner/</url>
-<icon>shield.png</icon>
-<copyright>2010 by Steve King</copyright>
+<icon>logo.png</icon>
+<copyright>Copyright (c) 2010 by Steve King</copyright>
     <!-- Window Definition - these values can be edited -->
     <window>
         <id>initial</id>

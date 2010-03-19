@@ -396,7 +396,7 @@ class HelpPage(Page):
         link = P()
         link \
                 <= A(href="javascript:homePage.render()") \
-                <= IMG(Class="mini-button", src="shield.png")
+                <= IMG(Class="mini-button", src="icons/medium/logo.png")
         link \
                 <= A(href="javascript:homePage.render()") \
                 <= "Back to Home Page"
@@ -421,12 +421,12 @@ class HomePage(Page):
         tr \
             <= TD() \
             <= A(href="javascript:manageVehicles.render()") \
-            <= IMG(Class='home-button', src='vehicles.png') \
+            <= IMG(Class='home-button', src='icons/large/vehicles.png') \
                 + P('Manage Vehicles')
         tr \
             <= TD() \
             <= A(href="javascript:manageRaces.render()") \
-            <= IMG(Class='home-button', src='races.png') \
+            <= IMG(Class='home-button', src='icons/large/races.png') \
                 + P('Manage Races')
         ht <= tr
 
@@ -434,7 +434,7 @@ class HomePage(Page):
         tr \
             <= TD(colspan="2") \
             <= A(href="javascript:helpPage.render()") \
-            <= IMG(Class='home-button', src='help.png') \
+            <= IMG(Class='home-button', src='icons/large/help.png') \
                 + P('Get Help')
         ht <= tr
 
@@ -582,7 +582,7 @@ class ManageRaces(Page):
             tr <= TD(Class='center') <= str(len(r.vehicles))
             tr <= TD(Class='center') <= INPUT(type="button", id="edt+%s"%r.uuid, value="Edit",   onclick="manageRaces.edit(this)")
             tr <= TD(Class='center') <= INPUT(type="button", id="del+%s"%r.uuid, value="Delete", onclick="manageRaces.remove(this)")
-            tr <= TD(Class='center') <= INPUT(type="image",  id="run+%s"%r.uuid, Class="micro-button", src="go.png", onclick="manageRaces.run(this)")
+            tr <= TD(Class='center') <= INPUT(type="image",  id="run+%s"%r.uuid, Class="micro-button", src="icons/small/go.png", onclick="manageRaces.run(this)")
             tbl <= tr
 
         p = P()
