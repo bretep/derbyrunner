@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<head>
+<title>Help for Partial Perfect-N Chart Generator</title>
+</head>
+<body>
+<H1 align=center>Help for Partial Perfect-N Chart Generator</H1>
+<H2>General</H2>
+<p>
+<b>
+This page uses a large JavaScript to produce Racing Charts which satisfy the Partial Perfect-N (PPN) criteria.  Where numbers permit, the charts also satisfy the Perfect-N criteria or the Complimentary Perfect-N criteria. 
+</b>
+
+<p>
+<b>
+PPN Charts are a concept expounded to me by Cory Young, under the name "Enhanced Lane Rotation."  They are "final standing" charts, which span the gaps in Perfect-N charts. They satisfy most of the Perfect-N criteria. 
+</b>
+
+<p>
+<b>
+A PPN chart is one which satisfies the conditions (1) Each car races the same number of times in each lane (which implies that the number of races is a multiple of the number of cars) (2) Equality of opposition is optimized, i.e., no head-to-head matchup count exceeds another by more than 1.
+</b>
+
+<p>
+<b>
+Accuracy of the PPN charts ranks below Perfect-N and above Stearns and Double Elimination.
+</b>
+
+<BR><BR><BR>
+<H2>Operation of the Generator</H2>
+<p>
+<b>
+A "form" provides several inputs which may be supplied or selected.
+While you are looking around for a chart to use, select "type of output" as "Chart".  Once you have selected final chart parameters, change the "type of output" to include either an attached or separate "Scoring Grid".
+</b>
+
+<p>
+<b>
+As part of the chart selection, you may select "type of output" as "DerbySim" which produces output that can be "cut and paste" into Cory Young's DerbySim program, which will evaluate the accuracy of the proposed selection. 
+</b>
+
+<BR><BR><BR>
+<H2>Definition of Inputs</H2>
+
+<H3>Chart Selection: Number of Lanes</H3>
+<p>
+<b>
+"Number of Lanes" describes the part of the track that you will use.  Remember, you do not have to use all of the lanes available on the track. You may wish to use only 2 or 3 of the lanes of a 6 lane track if the number of cars being served is small. If so, specify this value accordingly.
+</b>
+
+<BR><BR><BR>
+<H3>Chart Selection: Number of Cars</H3>
+<p>
+<b>
+Tell how many cars to include in the chart. This should be the actual number of cars that are to compete against each other.
+</b>
+
+<BR><BR><BR>
+<H3>Chart Selection: Number of Rounds</H3>
+<p>
+<b>
+A Round is defined as "Each car races once in lane 1." If there are ten cars in the race, then each Round will consist of 10 heats. Each "round" is scheduled according to its own "pairing rules" which determine which cars race each other and in which lanes. 
+</b>
+
+<BR><BR><BR>
+<H3>Output Selection: Chart</H3>
+<p>
+<b>
+The "Chart" option provides a table showing car's lane assignments by heat.  Each heat has places for recording the car's finish place in the heats.
+</b>
+
+<BR><BR><BR>
+<H3>Output Selection: Chart and Scoring Grid</H3>
+<p>
+<b>
+The "Chart and Scoring Grid" option adds a scoring grid along side each heat.  This allows car's heat scores to be recorded in columnar fashion to permit easy addition of their totals.
+</b>
+
+<p>
+<b>
+If there are too many lanes or too many cars to fit the scoring grid along side the heats, then the program changes to "Chart, Separate Scoring Grid" output.
+</b>
+
+<BR><BR><BR>
+<H3>Output Selection: Chart, Separate Scoring Grid</H3>
+<p>
+<b>
+The "Chart, Separate Scoring Grid" option first produces an output identical to the "Chart" option. It then adds a scoring grid that can be used separately. In this option, scores for each car are recorded across the page. A "total" box is supplied for each car. 
+</b>
+
+<p>
+<b>
+To help minimize transcription errors and facilitate checking, each score box has the heat number in it's upper left hand corner.  Room is provided to write in the correct score.
+</b>
+
+<BR><BR><BR>
+<H3>Output Selection: DerbySim</H3>
+<p>
+<b>
+The "DerbySim" option provides output in a form that can be pasted directly into Cory Young's DerbySim chart evaluation software. Use it to give yourself more confidence in the quality (accuracy) of the chart that you propose to use.
+</b>
+
+<p>
+<b>
+DerbySim and other software is available at Cory Young's <a href="http://www.geocities.com/Yosemite/Rapids/7146/pinewood.html">Pack 146 Pinewood Derby, Chantilly, VA</a> website.
+</b>
+
+<BR><BR><BR>
+<H3>Heat Ordering Options</H3>
+<p>
+<b>
+Three "heat ordering" options are available.  Weighting of heavy, medium, light and zero allow you to specify which options are most critical.  The second most heavily weighted option is applied when the most heavily weighted option does not differentiate candidate pairings.
+</b>
+
+<p>
+<b>
+Since the most heavily weighted option usually controls the heat sequence, you may wish to try different combinations of options before selecting one. 
+</b>
+
+<BR><BR><BR>
+<H3>Ordering Options: Keep race counts even?</H3>
+<p>
+<b>
+This option allows you to minimize the differences in how many heats the competitors have run.  It is useful if you think that cars change their performance (for better or worse) as they log heats.
+</b>
+
+<BR><BR><BR>
+<H3>Ordering Options: Avoid cars in consecutive races?</H3>
+<p>
+<b>
+This option eases the running of heats by avoiding, where possible, the same car racing in consecutive heats.  Not all charts can avoid the condition, but many can.  Using this option will often reduce the time needed to complete the races.
+</b>
+
+<BR><BR><BR>
+<H3>Ordering Options: Avoid cars in the same lanes in consecutive races?</H3>
+<p>
+<b>
+This option avoids an "appearance problem." It probably does not affect the accuracy of the chart, but it "looks better" if cars don't race in the same lane in consecutive heats.  
+</b>
+
+<BR><BR><BR>
+<H3>"Press here to Make the Chart" Button</H3>
+<p>
+<b>
+This generates the chart! After selections are made, "push" this button! The chart is generated in a separate window. 
+</b>
+
+<p>
+<b>
+In some browsers, it is necessary to dismiss a previously generated chart before a new one can be created.
+</b>
+
+<p>
+<b>
+The time to generate a chart depends, mainly, on the Ordering (optimization) options that are enabled and on the number of cars, lanes and rounds.  
+</b>
+
+<!--
+<H2>Using the Charts</H2>
+<p>
+<b>
+
+</b>
+-->
+<BR><BR>
+<A HREF="mailto:standcmr@aol.com"><IMG SRC="mailbox.jpg" ALT="E-Mail" ALIGN="BOTTOM" WIDTH="32" HEIGHT="32"><I>Feedback!</I></A>
+<BR>
+Copyright 1998 &copy; by Stan Pope and Cory Young.  All rights reserved.<BR>
+<IMG SRC="/cgi-bin/counter?name=standcmr/ctr3/ppngenh&font=invisible" alt="counter">
+</body>
+</HTML>
+
+
+
+

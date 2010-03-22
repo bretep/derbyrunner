@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<head>
+<title>Help for Partial Perfect-N Chart Scorekeeper</title>
+</head>
+<body>
+<H1 align=center>Help for Partial Perfect-N Chart Generator<BR>Scorekeeper Output Option</H1>
+<H2>General</H2>
+<p>
+<b>
+The "Scorekeeper" output option creates an interactive page that provides for keying heat results in and automatic computation of heat and total racer scores and automatic computation of final place. The page can be created and used "on-line" or stored on the user's local disk for use later. Local disk storage is recommended since it enables recovery after a computer failure. (This is because each chart generation produces a unique memory identifier.) Scores are recorded on the user's disk for recall and recovery.
+</b>
+
+<p>
+<b>
+Note: Some versions of Netscape do not save and print generated pages correctly.  All versions of Internet Explorer (that I have tested) do save and print correctly.
+</b>
+
+<p>
+<b>
+Scorekeeper uses "linear scoring," i.e. heat finishes are scored 1 point for last place, 2 points for next to last, etc. Each car's final score is the total of all of it's heat scores.
+</b>
+
+<BR><BR><BR>
+<H2>Operation of the Generator</H2>
+<p>
+<b>
+When a Scorekeeper chart has been generated, it should be stored on the user's disk for use offline and for use after recovery. The file name is at the user's discretion. 
+</b>
+
+<p>
+<b>
+To operate offline, the page requires a file called dummy2.html (dummy2.htm) in the same directory. This file can be created using any handy utility (e.g. Window's "notepad") and should contain a single space. It might be altered during program operation.
+</b>
+
+<BR><BR><BR>
+<H2>Operation of the "Scorekeeper"</H2>
+<H3>Normal Startup -- Discard saved memory.</H3>
+<p>
+<b>
+1. Load the page. If data from a prior run shows on the page, click the "Erase Memory" button and the "Yes! I'm Sure" button. This will clear the page's heat result memory.
+</b>
+
+<p>
+<b>
+2. Click the data input field for heat 1, lane 1.
+</b>
+
+<p>
+<b>
+3. When heat 1 has been raced, enter the finish places for lanes 1, 2, 3, etc.  Use the TAB key to move from lane to lane. Fields are range checked as they are entered. If the validator objects to an input, the error is signaled by an "alert" window with the message "Invalid Value!"
+</b>
+
+<p>
+<b>
+4. Then press the TAB key twice: the first TAB causes the heat data to be validated. Validation assures that each entry is unique. An error is signaled by an "alert" window with the message "Scoring Error". (Validator will not allow ties.)
+</b>
+
+<p>
+<b>
+5. The second TAB causes the heat data to be stored and the heat 2, lane 1 field to be focused, so that data input can continue for the next heat. 
+</b>
+
+<p>
+<b>
+6. Continue entering heat data until all heats have been recorded, edited and stored.
+</b>
+
+<p>
+<b>
+7. At any time, the "current score" can be displayed by clicking the "Show the Scoresheet" button. The scoresheet window should only be dismissed by using the "Close the Scoresheet" button. 
+</b>
+
+<p>
+<b>
+When all the heat results have been entered, edited and stored, create the "final scoresheet" by clicking the "Final?" button until the work "Final" appears in the adjacent field, then clicking the "Show the Scoresheet" button. 
+8. </b>
+
+<p>
+<b>
+9. The resulting scoresheet will contain the word "FINAL" below the subtitle. It will also show the finish places for the "top half" of the scorers. A single number in this field indicates that the car finished in that place. If more than one car had the same score, they will be shown as tied for the several places.  
+</b>
+
+<p>
+<b>
+Example: three cars with the same highest scores would be shown as "tie 1-3", and the next lower car would be shown as placing "4".
+</b>
+
+<H3>Recovery Startup -- Use saved memory.</H3>
+<p>
+<b>
+1. After activating the page, the sentence "Recovery data is available." will appear to the left of the "Refresh from Memory" button.  To retrieve the memory and populate the chart, click the "Refresh from Memory" button! The data input fields should "spring to life!"
+</b>
+
+<p>
+<b>
+2. Then click the lane 1 input field of the heat at which you wish to begin recording data. If the data is correct, you may tab through it. If not you may correct it and tab to the next input field. 
+</b>
+
+<p>
+<b>
+3. Continue operation as for normal data entry at step 6.
+</b>
+
+<H2>Error Conditions and Recovery</H2>
+
+<p>
+<b>
+1. "mWin.window is not an object."
+<BR><BR>
+This may occur when clicking the "Show the Scoresheet" or the "Close the Scoresheet" buttons. It happens if the Script thinks that the Scoresheet window is open and the browser has closed it.
+<BR><BR>
+To recover, click the "(Toggle window)" button once. 
+</b>
+
+<BR><BR>
+<HR>
+<A HREF="mailto:standcmr@aol.com"><IMG SRC="mailbox.jpg" ALT="E-Mail" ALIGN="BOTTOM" WIDTH="32" HEIGHT="32"><I>Feedback!</I></A>
+<BR>
+Copyright 1999 &copy; by Stan Pope and Cory Young.  All rights reserved.
+</body>
+</HTML>
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    background-color: #EFE8BE;
+    color: black;
+}
+
+a:link {
+    color: black;
+}
+
+table#header {
+    width: 100%;
+    background-color: #1A417E;
+    color: #F2CA00;
+}
+
+td#hdr-left {
+    height: 100%;
+    width: 25%;
+    text-align: left;
+}
+
+td#hdr-center {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+td#hdr-right {
+    width: 25%;
+    text-align: right;
+}
+
+th.label {
+    min-width: 8em;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+div#content {
+}
+
+div#homePage {
+    text-align: center;
+}
+
+div#about {
+    text-align: left;
+    border: ridge #1A417E 2px;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+.home-button {
+    width: 200px;
+}
+
+.mini-button {
+    height: 48px;
+    width: 48px;
+    vertical-align: middle;
+}
+
+.micro-button {
+    height: 24px;
+    width:  24px;
+}
+
+table#home-table {
+    margin-top: 2em;
+}
+
+table#home-table td {
+    padding: 1em;
+}
+
+table#heats {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+div#heatdiv {
+    float: left;
+    margin-top: .5em;
+}
+
+table#heats td {
+    padding: 2px;
+}
+
+div#standiv {
+    border: groove gray 2px;
+    float: right;
+    margin-top: .5em;
+}
+
+.note {
+    border: ridge #cccc00 4px;
+    font-style: italic;
+    background-color: yellow;
+    text-align: center;
+}
