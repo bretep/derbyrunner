@@ -364,6 +364,6 @@ if __name__ == '__main__':
         last = random.choice(LAST)
         rank = random.choice(RANK)
         seq[rank] += 1
-        vin = "%s%03d"%(rank[0],seq[rank])
+        vin = "%s%03d"%(rank[0:2],seq[rank])
     
         print '"%s","%s, %s","%s"'%(vin, last, first, rank)
